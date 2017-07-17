@@ -34,7 +34,7 @@ public class ActivityClient {
 //	}
 
 	public Activity getActivity(String id){	
-		WebTarget webTarget= client.target("http://localhost:8080/webservice-gfccc/");
+		WebTarget webTarget= client.target("http://localhost:8081/webservice-gfccc/");
 		Response target=webTarget.path("activities/"+id).request().get(Response.class);
 		
 		if (target.getStatus()!=200){
@@ -50,7 +50,7 @@ public class ActivityClient {
 
 	
 	public List<Activity> getAllActivities(){
-		WebTarget w= client.target("http://localhost:8080/webservice-gfccc/").path("activities");		
+		WebTarget w= client.target("http://localhost:8081/webservice-gfccc/").path("activities");		
 		//List<Activity> list= w.request().get(List.class);
 		List<Activity> list= w.request().get(new GenericType<List<Activity>>(){});
 		return list;
@@ -60,7 +60,7 @@ public class ActivityClient {
 		//WebTarget webTarget= client.target("http://localhost:8080/webservice-gfccc/");
 		//Response target=webTarget.path("activities/activity").
 		//		request(MediaType.APPLICATION_JSON).post(Entity.entity(activity, MediaType.APPLICATION_JSON));
-		WebTarget w=client.target("http://localhost:8080/webservice-gfccc/").path("activities/activity");
+		WebTarget w=client.target("http://localhost:8081/webservice-gfccc/").path("activities/activity");
 		
 		return null;
 		//return target.readEntity(Activity.class);

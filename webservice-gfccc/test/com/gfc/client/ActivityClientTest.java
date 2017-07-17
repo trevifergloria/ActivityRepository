@@ -36,8 +36,8 @@ public class ActivityClientTest {
 	@Test (expected=RuntimeException.class)
 	public void testActivityForException(){
 		ActivityClient activityClient=new ActivityClient();
-		Activity activity=activityClient.getActivity("6666");
-		
+		//Activity activity=
+				activityClient.getActivity("6666");	
 	}
 	
 	@Test
@@ -46,9 +46,7 @@ public class ActivityClientTest {
 		Activity activity=new Activity();
 		activity.setDescription("Jogging");
 		activity.setDuration(85);
-		activity= activityClient.createActivity(activity);
-		
+		activity= activityClient.createActivity(activity);	
 		assertNotNull(activity);
 	}
-	
 }
