@@ -48,5 +48,6 @@ public class ActivityClientTest {
 		activity.setDuration(85);
 		activity= activityClient.createActivity(activity);	
 		assertNotNull(activity);
+		System.out.println(activity);
 	}
 }
